@@ -1,0 +1,15 @@
+[build]
+  publish = "public" # Répertoire contenant les fichiers à déployer
+  functions = "fb-chat-api" # Répertoire contenant les fonctions Netlify (si vous en avez)
+
+[build.environment]
+  NODE_VERSION = "14" # Spécifiez la version de Node.js que vous souhaitez utiliser
+
+[[redirects]]
+  from = "/index.js"
+  to = "/index.js"
+  status = 200
+  force = true
+
+[context.production.environment]
+  # Vous pouvez définir ici les variables d'environnement spécifiques à la production
